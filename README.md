@@ -1,4 +1,4 @@
-# Torre de Hanoi (Asseembly)
+# Torre de Hanói (Assembly)
 ## CIn - Universidade Federal de Pernambuco
 ### Discentes: Alberis e Arlen Ferreira da Silva Filho
 ### Doscente: Sergio Vanderlei Cavalcante
@@ -7,4 +7,4 @@
 ![Ilustração do jogo torre de hanoi](https://cdn.kastatic.org/ka-perseus-images/5b5fb2670c9a185b2666637461e40c805fcc9ea5.png)
 #### Esse algoritmo foi criado como um projeto para a cadeira de Organização de computadores e sistemas operacionais no Centro de Inforática da Univercidade Federal de Pernambuco (UFPE - CIn).
 #### Existe outro repositório no qual o mesmo problema foi resolvido utilizando a linguagem Python. Que se encontra no link abaixo:
-#### (https://github.com/4RL3N/Torre-de-Hanoi.git)
+(https://github.com/4RL3N/Torre-de-Hanoi.git)

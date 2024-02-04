@@ -3,11 +3,14 @@ section .data ;lida com os dados na mem?ria principal
     mensagem_inicial db 'Digite a quantidade de discos: ', 0xa
     len_mensagem equ $ - mensagem_inicial
     
-    exibir1 db 'Algoritmo da Torre de Hanoi com '
+    exibir1 db 'Algoritmo da Torre de Hanoi com "'
     len_exb1 equ $ - exibir1
     
-    exibir2 db ' discos', 0xa
+    exibir2 db '" discos', 0xa
     len_exb2 equ $ - exibir2
+    
+    inv db 'Caracter invalido!', 0xa
+    len_inv equ $ - inv
 
     mensagem_final:
                           db "Mova o disco "                      
@@ -47,7 +50,7 @@ _start:
     mov ebx, 0
     mov ecx, n
     mov edx, 8
-    int 0x80                              
+    int 0x80
     
     ;escreve a mensagem "torre de hanoi com n discos"
     mov eax, 4
@@ -109,7 +112,18 @@ str_para_int:
         jmp .loop
     
     .done:
+        test eax, eax
+        jz invalido
         ret
+
+invalido:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, inv
+    mov edx, len_inv
+    int 0x80
+    
+    jmp _start
 
 torre_hanoi:
     push ebp ;salva o registrador ebp na pilha

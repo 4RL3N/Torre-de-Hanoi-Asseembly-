@@ -1,4 +1,4 @@
-# Torre de Hanoi (Assembly)
+# Torre de Hanói (Assembly)
 ## CIn - Universidade Federal de Pernambuco
 ### Discentes: Alberis Alves da Silva e Arlen Ferreira da Silva Filho
 ### Docente: Sergio Vanderlei Cavalcante

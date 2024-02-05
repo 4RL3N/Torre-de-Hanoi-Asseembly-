@@ -9,7 +9,7 @@ section .data ;lida com os dados na mem?ria principal
     exibir2 db '" discos', 0xa
     len_exb2 equ $ - exibir2
     
-    inv db 'Caracter invalido!', 0xa
+    inv db 'Caracter invalido! (insira um valor entre 1 e 9)', 0xa
     len_inv equ $ - inv
 
     mensagem_final:
@@ -73,6 +73,11 @@ _start:
     
     mov edx, n                  
     call str_para_int
+
+    cmp eax, 1
+    jl invalido
+    cmp eax, 9
+    jg invalido
     
     ;3 pilhas
     push dword 18 ;torre auxiliar, o valor ? o endereco da pilha
